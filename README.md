@@ -1,2 +1,2 @@
-# sk3tch
+# badges
 Badge hacking and whatnot
