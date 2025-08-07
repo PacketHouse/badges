@@ -47,9 +47,9 @@ Build your TDI DIY 2025 badge (see Acknowledgement section for link to assembly 
 --- 0001: Display bouncing Defcon handle
 --- 1010: Display real name
 --- 1011: Display company name
---- 0110: Other
---- 0101: Other
---- 1101: Other
+--- 0110: Other...
+--- 0101: Other...
+--- 1101: Other...
 
 ## Help
 * main.py has variables you can modify to customize the messages displayed on the OLED.
