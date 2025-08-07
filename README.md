@@ -1,6 +1,5 @@
 # Project Title
-
-sk3tch w/ str3tch
+![alt text](images/TDI_DIY_2025_BADGE.png "sk3tch w/ st3tch")
 
 ## Description
 
