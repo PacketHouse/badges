@@ -175,6 +175,7 @@ def main():
                         ols.show_sws()
                         time.sleep(3)
 
+
             if cmd_txt == 'SAVE':
                 lds.clear()
                 lds.set_on(wait=0.5)

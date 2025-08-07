@@ -12,20 +12,27 @@ Build your TDI DIY 2025 badge (see Acknowledgement section for link to assembly 
 
 ### Dependencies
 
-* picozero.py (included in flashed picozero from TDI Maker Villiage, but also included here if needed)
-* ssd1306.py (included in flashed picozero from TDI Maker Villiage, but also included here if needed)
-* mpremote (for transfering files to/from picozero via CLI in python environment)
+* picozero.py (included in flashed picozero from TDI Maker Village, but also included here if needed)
+* ssd1306.py (included in flashed picozero from TDI Maker Village, but also included here if needed)
+* mpremote (for transferring files to/from picozero via CLI in python environment)
 
 ### Installing
 
 * Download main.py and the TDI2025 directory
 * Connect the picozero device to a computer via USB
+* Setup python environment
+```
+python3 -m venv .venv
+```
+* Activate python environment
+```
+source .venv/bin/activate
+```
 * Use mpremote or Thonny to manage files on the picozero devices
+```
+pip install mpremote
+```
 * Copy main.py and the TDI2025 directory to the picozero (the included deploy.sh script can automate this)
-
-### Executing program
-
-* Deploy code
 ```
 ./deploy.sh
 ```
@@ -85,6 +92,6 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 ## Acknowledgments
 
 Inspiration, code snippets, etc.
-* [TDI Maker Villiage](https://sites.google.com/dianainitiative.org/makersvillage/home)
+* [TDI Maker Village](https://sites.google.com/dianainitiative.org/makersvillage/home)
 * [TDI 2025 DIY badge build video](https://www.youtube.com/watch?v=jirdqZoKM7A)
 * [DomPizzie README template](https://gist.github.com/DomPizzie/7a5ff55ffa9081f2de27c315f5018afc)

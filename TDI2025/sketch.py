@@ -125,6 +125,23 @@ class Sketch(object):
         else:
             self.pixels[position] = 1
 
+    def clear(self):
+        self.pixels = [0] * self.res
+        self.x = self.min_x
+        self.y = self.min_y
+        self.add_pixel(self.current_pixel())
+
+    def current_pixel(self):
+        return ((self.y - 1) * self.max_x) + self.x
+
+    def get_active_pixel_count(self):
+        active = 0
+        for i in range(self.res):
+            if self.pixels[i] == 1:
+                active += 1
+
+        return active
+
     def get_art(self, background=' ', border='#', foreground='*',
                 include_frame=False, pad_len=4, signature=None):
         if self.signature and signature is None:
@@ -155,22 +172,6 @@ class Sketch(object):
             art = '\n'.join(lines)
 
         return art
-
-    def clear(self):
-        self.pixels = [0] * self.res
-        self.x = self.min_x
-        self.y = self.min_y
-
-    def current_pixel(self):
-        return ((self.y - 1) * self.max_x) + self.x
-
-    def get_active_pixel_count(self):
-        active = 0
-        for i in range(self.res):
-            if self.pixels[i] == 1:
-                active += 1
-
-        return active
 
     def move_left(self):
         # Make sure we always have a movement
