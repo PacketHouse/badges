@@ -26,32 +26,41 @@ Build your TDI DIY 2025 badge (see Acknowledgement section for link to assembly 
 ### Executing program
 
 * Deploy code
-``` ./deploy.sh
+```
+./deploy.sh
+```
 
-## DIP Usage
-# Main management of sk3tch
---- 1111: main sk3tch "lobby"
---- 0110: save sk3tch masterpiece to file on picozero as ascii art
---- 0000: reset sk3tch and the rest of the badge state
+## Executing program
 
-# sk3tch commands
---- 1110: turn/draw right
---- 0111: turn/draw left
---- 1100: turn/draw up
---- 0011: turn/draw down
+### sk3tch management
+```
+1111: main sk3tch "lobby"
+0110: save sk3tch masterpiece to file on picozero as ascii art
+0000: reset sk3tch and the rest of the badge state
+```
 
-# Other funzies
---- 1000: Display "He/Him/His"
---- 0100: Display "She/Her/Hers"
---- 0010: Display "They/Them/Theirs"
---- 0001: Display bouncing Defcon handle
---- 1010: Display real name
---- 1011: Display company name
---- 0110: Other...
---- 0101: Other...
---- 1101: Other...
+### sk3tch commands
+```
+1110: turn/draw right
+0111: turn/draw left
+1100: turn/draw up
+0011: turn/draw down
+```
 
-## Help
+### Other funzies
+```
+1000: Display "He/Him/His"
+0100: Display "She/Her/Hers"
+0010: Display "They/Them/Theirs"
+0001: Display bouncing Defcon handle
+1010: Display real name
+1011: Display company name
+0110: Other...
+0101: Other...
+1101: Other...
+```
+
+# Help
 * main.py has variables you can modify to customize the messages displayed on the OLED.
 * The dip switches can be tricky at times, not truly having switches enabled.  Resetting the switch usually helps.
 * The picozero has very limited memory.  If you encounter a memory error, turning the badge on and off again can help.
